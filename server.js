@@ -1,15 +1,20 @@
 const express = require('express');
+const axios = require('axios');
 const path = require('path');
 const homeRoute = require('./src/routes/home');
-const searchRoute = require('./src/routes/search');
-const recipeRoute = require('./src/routes/recipe');
+const ejs = require('ejs');
 
 require('dotenv').config();
+
+const key_api = process.env.API_KEY; 
+
+
 
 const app = express();
 
 // Middleware 
-app.use(express.static('public'));
+app.set('view engine', 'ejs');
+app.use(express.static('src'));
 app.use(express.urlencoded({extended: false}));
 
 app.get('/', (req, res) => {
@@ -18,8 +23,23 @@ app.get('/', (req, res) => {
 
 // Routes
 app.use('/home', homeRoute);
-app.use('/search', searchRoute);
-app.use('/recipe', recipeRoute);
+
+
+
+app.post('/search', async (req, res) => {
+    console.log(req.body);
+    const {query} = req.body;
+    const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${key_api}`)
+    const recipes = response.data.results;
+    res.render('results', {recipes})
+});
+
+app.get('/recipe/:id', async (req, res) => {
+    const {id} = req.params;
+    const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${key_api}`)
+    const recipe = response.data;
+    res.render('recipe', {recipe})
+});
 
 const PORT = process.env.PORT || 3000;
 
