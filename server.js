@@ -13,6 +13,7 @@ const key_api = process.env.API_KEY;
 const app = express();
 
 // Middleware 
+app.set('views', path.join(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static('src'));
 app.use(express.urlencoded({extended: false}));
@@ -23,8 +24,6 @@ app.get('/', (req, res) => {
 
 // Routes
 app.use('/home', homeRoute);
-
-
 
 app.post('/search', async (req, res) => {
     console.log(req.body);
