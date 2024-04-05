@@ -49,7 +49,8 @@ router.get("/", async (req, res) => {
             <div class="container">
               <ul class="menu">
                 <li class="logo"><img src="/public/img/logo1.png" alt="logo" /></li>
-                <li class="menu-item"><a href="/home">Home</a></li>
+                <li class="menu-item active"><a href="/home">Home</a></li>
+                <li class="menu-item"><a href="/about">About</a></li>
                 <li class="menu-item"><a href="https://spoonacular.com/food-api" target="_blank">Api</a></li>
                 <li class="menu-item"><a href="https://github.com/SigridMV" target="_blank">Contact</a></li>
               </ul>

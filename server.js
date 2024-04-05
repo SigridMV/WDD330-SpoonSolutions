@@ -40,6 +40,10 @@ app.get('/recipe/:id', async (req, res) => {
     res.render('recipe', {recipe})
 });
 
+app.get('/about', (req, res) => {
+    res.render('about');
+});
+
 const PORT = process.env.PORT || 3000;
 
 // Server
