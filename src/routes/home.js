@@ -52,7 +52,7 @@ router.get("/", async (req, res) => {
                 <li class="menu-item active"><a href="/home">Home</a></li>
                 <li class="menu-item"><a href="/about">About</a></li>
                 <li class="menu-item"><a href="https://spoonacular.com/food-api" target="_blank">Api</a></li>
-                <li class="menu-item"><a href="https://github.com/SigridMV" target="_blank">Contact</a></li>
+                <li class="menu-item"><a href="https://www.linkedin.com/in/smullervidal/" target="_blank">Contact</a></li>
               </ul>
             </div>
           </nav>
@@ -80,13 +80,13 @@ router.get("/", async (req, res) => {
             <div class="container">
               <ul class="social-icons">
                 <li>
-                  <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter fa-2x"></i></a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
                 </li>
               </ul>
             </div>

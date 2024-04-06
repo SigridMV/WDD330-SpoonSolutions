@@ -86,7 +86,6 @@ nav {
 
 .recipe-card {
   width: 100%; 
-  margin-bottom: 20px;
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -99,23 +98,22 @@ nav {
 }
 
 .random-recipes h1 {
+  margin-top: 10px;
   margin-bottom: 10px; 
   font-size: 1.5em; 
   color: #333;
 }
 
-.container {
-  padding: 0 10px;
+.random-recipes{
+  margin-bottom: 100px;
 }
+
 
 footer {
   background-color: #379392;
   padding: 10px 0;
   color: #fff;
   text-align: center;
-}
-
-footer {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -123,6 +121,7 @@ footer {
 
 .social-icons {
   padding: 0;
+  
 }
 
 .social-icons li {
@@ -131,7 +130,7 @@ footer {
 }
 
 .social-icons i {
-  max-height: 20px;
+  
   color: #ffffff;
 }
 
@@ -158,6 +157,10 @@ footer {
   text-decoration: none; /* Quitamos la subrayado del enlace */
 }
 
+.row{
+  margin-bottom: 100px;
+}
+
 .btn-back:hover {
   background-color: #0056b3; /* Cambiamos el color de fondo al pasar por encima */
 }
@@ -172,13 +175,6 @@ footer {
   outline: none;
 }
 
-
-
-.recipe-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  overflow: hidden;
-}
 
 .recipe-card:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -260,7 +256,7 @@ a {
 
   .recipe-card {
     width: calc(33.33% - 10px);
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
